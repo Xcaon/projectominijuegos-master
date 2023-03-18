@@ -40,6 +40,6 @@
         </div>
     </div>
     
-    <script src="javascript/alerta.js"></script>
+    
 </body>
 </html>
