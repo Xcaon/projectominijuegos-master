@@ -35,9 +35,7 @@ if ( isset($usuario) && isset($password)){
                  if ( $query && mysqli_num_rows($query) >= 1){
                      echo("Se ha encontrado el usuario");
                      header('Location: inicio.html');
-                     echo "Se ha creado exitosamente su usuario";
                      die();
-                     
                  } else {
                      echo "<h3 style=' border-radius: 4px; color: white; padding: 5px; background-color: red;',color: black;'>No se ha encontrado el usuario</h3>";
                      return 2;
@@ -95,24 +93,22 @@ $db->close();
                         $query = mysqli_query($db, $consultaSql);
                         
                         if ( $query ){
-                            header('Location: login.php');    
+                            header('Location: login.php');
                         }
                          
                      } else {
-                         echo "<h3 style=' color: white; padding: 5px; background-color: red;',color: black;'>El usuario ya existe</h3>";
-                         return 2;
+                         echo "<h3 style=' border-radius: 4px; color: white; padding: 5px; background-color: red;',color: black;'>No se ha podido crear el usuario</h3>";
                      }
                 }
             }
     } else {
-        echo "<h3> Ha habido un error al crear el usuario</h3>";
+        echo "<h3> Ha habido un error introduciendo al usuario</h3>";
         return 1;
     }
     
     $db->close();
 
 }
-
 
 
 
