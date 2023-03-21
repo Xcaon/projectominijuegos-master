@@ -7,69 +7,56 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="estilos/estilos.css" />
     
-</head>
-<body>
     
-    <div class="encabezado">
-        <div class="contenedor">
-            <div class="titulo"><h1 class="texto">RADICAL GAMES</h1></div>
-
-            <div class="iconoLogin">
-                <div class="icono">
-                    <img class="imagen" width="50" height="50" src="imagenes/usuario.png">
+</head>
+<body >
+    
+    <div class="main">
+        <div class="encabezado">
+            <div class="contenedor">
+                <div class="titulo"><h1 class="texto">RADICAL GAMES</h1></div>
+    
+                <div class="iconoLogin">
+                    <div class="icono">
+                        <img class="imagen" width="50" height="50" src="imagenes/usuario.png">
+                    </div>
                 </div>
             </div>
+        
         </div>
     
-    </div>
+    
+        <div class="cuerpo" >
+            <div class="buscar" >
+                <input type="text" id="busqueda" placeholder="Buscar juego">
+            </div><br><br>
 
-
-    <div class="cuerpo">
-        <div>
-            <input type="text" id="busqueda" placeholder="Buscar juego">
-        </div><br><br>
-        <h3>Juegos individuales</h3>
-        <div id="lista-individuales" class="tablaJuegos">
+            <section>
+                <h3>Juegos individuales</h3>
+                <div id="lista-individuales" class="tablaJuegos">
+                </div >
+            </section>
+          
+            <section>
+                <h3>Juegos multijugador</h3>
+                <div id="lista-multijugador" class="tablaJuegos">
+                </div>
+            </section>
             
-            <!--<div name= "Tetris" class="juego"><a href="Juegos/Tetris/Source/tetris.html">
-                <button class="nombre">Tetris</button>
-             </a></div>
-             <div name= "Snake" class="juego"><a href="Juegos/Snake/gamePage.html">
-                <button class="nombre">Snake</button>
-             </a></div>
-            <div name= "juego" class="juego"></div>
-            <div name= "juego" class="juego"></div>
-            <div name= "juego" class="juego"></div>
-            <div name= "juego" class="juego"></div>
-            <div name= "juego" class="juego"></div>
-            <div name= "juego" class="juego"></div>
-            <div name= "juego" class="juego"></div>
-            <div name= "juego" class="juego"></div>
-            <div name= "juego" class="juego"></div>
-            <div name= "juego" class="juego"></div>
-            <div name= "juego" class="juego"></div>
-            <div name= "juego" class="juego"></div>
-            <div name= "juego" class="juego"></div>
-            <div name= "juego" class="juego"></div>
-            <div name= "juego" class="juego"></div>
-            <div name= "juego" class="juego"></div>
-            <div class="juego"></div>
-            <div class="juego"></div>
-            <div class="juego"></div>
-            <div class="juego"></div>-->
-
-
+            
+            <section >
+                <h3>Juegos arcade</h3>
+                <div id="lista-arcade" class="tablaJuegos">
+                </div>
+            </section>
+                  
+            
+            
+            
+    
         </div>
-        <!--Juegos multijugador-->
-        <h3>Juegos multijugador</h3>
-        <div id="lista-multijugador" class="tablaJuegos">
-        </div>
-        <!--Juegos arcade-->
-        <h3>Juegos arcade</h3>
-        <div id="lista-arcade" class="tablaJuegos">
-        </div>
-
+        <script src="javascript/script.js "></script>
     </div>
-    <script src="javascript/script.js "></script>
+    
 </body>
 </html>

@@ -8,7 +8,10 @@
 ];*/
 const datos = [
   { nombre: "Snake", direccion: "Juegos/Snake/gamePage.html", imagen: "Juegos/Snake/images/snake.jpg" },
-  { nombre: "Tetris", direccion: "Juegos/Tetris/Source/tetris.html", imagen: "Juegos/Tetris/Source/images/bannertetris.PNG" }
+  { nombre: "Tetris", direccion: "Juegos/Tetris/Source/tetris.html", imagen: "Juegos/Tetris/Source/images/bannertetris.PNG" },
+  { nombre: "Sonic", direccion:"", imagen: ""},
+  { nombre: "Flappy Birds", direccion:"", imagen: ""},
+  { nombre: "Football Heads", direccion:"", imagen: ""}
 ];
 
 const listaElementos = datos.map((dato) => {

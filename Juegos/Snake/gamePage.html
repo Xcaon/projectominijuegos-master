@@ -48,10 +48,7 @@
       <canvas width="400" height="400" id="game"></canvas>
     </div>
     
-    <div class="puntuacion">
-      <h2 class="h2juegos">Puntuación</h2><br>
-      <h2 id="scorep">Score</h2>
-    </div>
+    
     <div class="reglas">
       <h2 class="h2juegos">Reglas</h2><br>
       <label>Debes comerte la manzana para sumar puntos sin chocarte con tu propia cola.</label>
@@ -197,6 +194,37 @@
       
       // start the game
       requestAnimationFrame(loop);
-      </script>
-  </body>
+    </script>
+
+    <!--
+      PUNTUACION ACTUAL
+    -->
+
+  <div class="puntuacion">
+    <h2 class="h2juegos">Puntuación</h2><br>
+    <h3 id="actualScore"></h3>
+
+    <h2 id="scorep">Record Personal</h2>
+    <h3 id="maxScore"></h3>
+
+    <!--
+      ACTUALIZAR EL MARCADOR DE PUNTUACION ACTUAL Y EL DE RECORD PERSONAL
+    -->  
+    <script>
+      var score;
+      var maxScore = 0;
+      setInterval(function() {
+        score = snake.maxCells-4; 
+        document.getElementById("actualScore").innerHTML = score;
+        
+        if(score > maxScore){
+          maxScore = score;
+          document.getElementById("maxScore").innerHTML = maxScore;
+        }
+      }, 1);
+      
+    </script>
+
+  </div>
+</body>
 </html>
