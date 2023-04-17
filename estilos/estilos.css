@@ -206,3 +206,34 @@ h3{
     text-align: center;
     font-size: 33px;
 }
+.btjuegos {
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    color: #333;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 10px 20px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btjuegos.active {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .btjuegos:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  .filtro-juegos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .filtro-juegos button {
+    margin: 0 10px;
+  }

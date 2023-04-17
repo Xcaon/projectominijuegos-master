@@ -6,8 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="estilos/estilos.css" />
-    
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        
+        .tablaJuegos {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            /*grid-template-rows: repeat(3, 1fr);*/
+            align-items: center;
+        }
+
+        .juego {
+            border: 3px solid #ffffff;
+            font-family: arial;
+            height: 100px;
+            width: 60%;
+            text-align: center;
+            background: white;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 64px;
+            border-radius: 20px;
+            align-self: center;  
+        }
+
+        .nombre {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            font-size: 16px;
+            background-color: rgba(0, 0, 0, 0.701);
+            color: white;
+            font-family: 'roboto';
+            font-weight: 300;
+            left: 0;
+            border-radius: 0px 0px 20px 20px;
+            border: 0px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body >
 
@@ -29,38 +69,74 @@
             
 
         </div>
-    
-    
         <div class="cuerpo" >
-
-            
-
-            <section>
-                <h3>Juegos individuales</h3>
-                <div id="lista-individuales" class="tablaJuegos">
-                </div >
-            </section>
-          
-            <section>
-                <h3>Juegos multijugador</h3>
-                <div id="lista-multijugador" class="tablaJuegos">
-                </div>
-            </section>
-            
-            
-            <section >
-                <h3>Juegos arcade</h3>
-                <div id="lista-arcade" class="tablaJuegos">
-                </div>
-            </section>
-                  
-            
-            
-            
-    
+            <div class="filtro-juegos">
+                <button id="btn-combate" class="btjuegos">Combate <i class="fa-solid fa-person-rifle"></i></button>
+                <button id="btn-puzle" class="btjuegos">Puzles <i class="fa-solid fa-puzzle-piece"></i></button>
+                <button id="btn-carreras" class="btjuegos">Carreras <i class="fa-solid fa-car-burst"></i></button>
+                <button id="btn-educativos" class="btjuegos">Educativos <i class="fa-solid fa-graduation-cap"></i></button>
+                <button id="btn-online" class="btjuegos">Online <i class="fa-solid fa-globe"></i></button>
+                <button id="btn-tradicionales" class="btjuegos">Tradicionales <i class="fa-solid fa-dice"></i></button>
+              </div><br><br>
+              
+              <div id="contenedor-juegos" class="tablaJuegos">
+              </div>
         </div>
         <script src="javascript/script.js "></script>
     </div>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const contenedorJuegos = document.getElementById("contenedor-juegos");
+
+        document.getElementById("btn-combate").addEventListener("click", function() {
+        const juegosCombate = datos.filter((juego) => juego.tipo === "combate");
+        mostrarJuegos(juegosCombate);
+        });
+
+        document.getElementById("btn-online").addEventListener("click", function() {
+        const juegosOnline = datos.filter((juego) => juego.tipo === "online");
+        mostrarJuegos(juegosOnline);
+        });
+
+        document.getElementById("btn-puzle").addEventListener("click", function() {
+        const juegosPuzles = datos.filter((juego) => juego.tipo === "puzles");
+        mostrarJuegos(juegosPuzles);
+        });
+        document.getElementById("btn-tradicionales").addEventListener("click", function() {
+        const juegosTradicionales = datos.filter((juego) => juego.tipo === "tradicionales");
+        mostrarJuegos(juegosTradicionales);
+        });
+
+        document.getElementById("btn-educativos").addEventListener("click", function() {
+        const juegosEducativos = datos.filter((juego) => juego.tipo === "educativos");
+        mostrarJuegos(juegosEducativos);
+        });
+
+        document.getElementById("btn-carreras").addEventListener("click", function() {
+        const juegosCarreras = datos.filter((juego) => juego.tipo === "carreras");
+        mostrarJuegos(juegosCarreras);
+        });
+
+        function mostrarJuegos(juegos) {
+        const listaElementos = juegos.map((juego) => {
+            return `<div style="background-image: url(${juego.imagen} ); background-size: cover;" class="juego"> <a href="${juego.direccion}">
+        
+            <button class="nombre">${juego.nombre}</button></a> </div>`;
+        });
+
+        contenedorJuegos.innerHTML = listaElementos.join("");
+        }
+        const btns = document.querySelectorAll('.btjuegos');
+
+        btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remover la clase active de todos los botones
+            btns.forEach(otherBtn => otherBtn.classList.remove('active'));
+
+            // Agregar la clase active al botón seleccionado
+            btn.classList.add('active');
+        });
+        });
+    </script>
 </body>
 </html>
