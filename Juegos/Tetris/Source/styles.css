@@ -84,3 +84,50 @@ h2{
 .h2juegos{
   text-decoration: underline;
 }
+
+
+/* meeeeeeee */
+.slider {
+  height: 200px;
+  display: flex;
+  overflow-x: auto;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.slide {
+  flex: 0 0 300px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.image-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.info-container {
+  margin-left: 120px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+p {
+  font-size: 18px;
+  margin: 0;
+  color: white;
+}
