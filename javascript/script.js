@@ -38,3 +38,12 @@ document.getElementById("busqueda").addEventListener("input", function() {
     }
   }
 });
+
+var icono = document.querySelector('.imagen');
+
+icono.addEventListener("click", redirigir);
+
+
+function redirigir() {
+  window.location.href = 'login.php';
+}

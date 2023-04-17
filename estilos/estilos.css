@@ -18,7 +18,10 @@ body {
     height: 100%;
 }
 
-
+.enlace {
+    width: 100px;
+    height: 100px;
+}
 
 .encabezado {
 
