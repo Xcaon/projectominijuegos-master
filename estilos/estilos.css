@@ -1,6 +1,6 @@
 *{
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -10,7 +10,7 @@ body {
     background-image: url(imagenes/fondo.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #396868;
+    background-color: #30475E;
     
 }
 .main{
@@ -24,34 +24,64 @@ body {
 }
 
 .encabezado {
-    padding-top: 5%;
-    height: 60px;
-    background: linear-gradient(#1d3e32, #396868); 
-    min-height: 100px;
-    max-height: 150px;
-    border-radius: 4px;
-    margin-bottom: 64px;
-}
 
-.contenedor {
-    margin-left: 5%;
-    width: 100%;
-    display: flex;
-    justify-content: start;
+    height: 150px;
+    background-color: #222831;
+    padding: 8px;
+    display: block;
     align-items: center;
-}
 
-.titulo {
-    background-color: #dbe7e7 !important;
-    border-radius: 20px;
-    display: flex;
-    width: 75%;
-    min-height: 100px;
+}   
+
+.imagenLogo{
     float: left;
-    background-color: white;
-    align-items: center;
-    justify-content: center;
+    margin-left: 10px;
 }
+
+.buscar{
+    margin-top: 100px;
+    margin-right: 400px;
+    font-family: arial;
+    list-style: none;
+    background-color: #222831;
+
+    
+}
+
+.buscar input{
+    
+    margin-left: 1100px;
+    background-color: #d0d3d7;
+    width: 300px;
+    
+
+}
+
+
+.buscar li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+    float: left;
+    margin-left: 100px;
+}
+
+.enlace{
+    background-color: #30475E;
+    border-top-right-radius: 15%;
+    border-top-left-radius: 15%;
+}
+
+
+
+.imagenPerfil{
+    margin-left: 700px;
+    position: relative;
+    top: -130px;
+    border-radius: 50%;
+}
+
 
 .texto {
     font-size: 32px;
@@ -87,13 +117,13 @@ a {
        inset 0 -3em 3em rgba(0,0,0,0.1),
              0 0  0 2px rgb(255,255,255),
              0.3em 0.3em 1em rgba(0,0,0,0.3);
-    background: radial-gradient(#396868, #1d3e32);
+   /* background-color: #30475E;*/
     margin: 5%;
     opacity: 0.95;
     height: 100%;
     padding: 1%;
     border-radius: 23px;
-    background-color:#2f614f;
+    background-color:#30475E;
     height: 100vh;
 }
 
@@ -158,14 +188,12 @@ input {
     
   }
 
-.cuerpo .buscar input{
-    margin-left: 30%;
-    background-color: #d0d3d7;
-    width: 40%;
-}
+
+
+
 section{
     margin: 2%;
-    background-color: #1d3e32;
+    background-color: #30475E;
     border-radius: 23px;
     height: 24%;
 }
@@ -179,3 +207,34 @@ h3{
     text-align: center;
     font-size: 33px;
 }
+.btjuegos {
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    color: #333;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 10px 20px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btjuegos.active {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .btjuegos:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  .filtro-juegos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .filtro-juegos button {
+    margin: 0 10px;
+  }

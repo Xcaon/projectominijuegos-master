@@ -263,7 +263,8 @@ y a <a href="https://freesound.org/people/grunz/sounds/109662/">Freesound.org</a
 
 
     addScore(rows) {
-        this.scorep += Game.PER_SQUARE_SCORE * Game.COLUMNS * rows.length;
+        this.scorep += Game.PER_SQUARE_SCORE * Game.COLUMNS * rows.length;        
+        
         this.refreshScore();
     }
 
@@ -413,6 +414,8 @@ y a <a href="https://freesound.org/people/grunz/sounds/109662/">Freesound.org</a
 
     refreshScore() {
         this.$scorep.textContent = `${this.scorep}`;
+        if(`${this.maxScore}`)
+        this.$maxScore.textContent = `${this.maxScore}`;
     }
 
     initSounds() {
@@ -426,6 +429,7 @@ y a <a href="https://freesound.org/people/grunz/sounds/109662/">Freesound.org</a
         this.$canvas = document.querySelector("#" + this.canvasId);
         this.$score = document.querySelector("#puntaje");
         this.$scorep = document.querySelector("#scorep");
+        this.$maxScore = document.querySelector("#maxScore");
         this.$btnPause = document.querySelector("#btnPausar");
         this.$btnResume = document.querySelector("#btnIniciar");
         this.$btnRotate = document.querySelector("#btnRotar");

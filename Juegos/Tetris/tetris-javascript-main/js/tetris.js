@@ -754,3 +754,4 @@ const game = new Game("canvas");
 document.querySelector("#reset").addEventListener("click", () => {
     game.askUserConfirmResetGame();
 });
+

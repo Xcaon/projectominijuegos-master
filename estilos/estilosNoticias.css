@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.noticias{
+    overflow: auto;
+    font-size: larger;
+}
