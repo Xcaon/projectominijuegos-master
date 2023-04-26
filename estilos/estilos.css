@@ -53,7 +53,7 @@ a:active {
 .elementoInput {
     display: inline;
     margin-left: 20px;
-    transform: translateX(40px);
+    transform: translateX(10px);
 }
 
 .encabezado {
@@ -291,4 +291,49 @@ h3{
   
   .filtro-juegos button {
     margin: 0 10px;
+  }
+
+  .recursos {
+    margin-top: 30px;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+  }
+
+  .cuadrado {
+    border-radius: 12px;
+    margin-right: 60px;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: relative;
+  }
+
+  .imageVentaja {
+    border-radius: 12px;
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .textoVentaja {
+    position: absolute;
+    display: block;
+    top: 50%;
+    color: white;
+    text-align: center;
+    background-color: #cccccca1;
+    width: 100%;
+  }
+
+  .llamadaAccion {
+    padding: 20px;
+    border-radius: 8px;
+    float: right;
+    margin-top: 20px;
+    margin-right: 200px;
+    width: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
   }
