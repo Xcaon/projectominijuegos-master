@@ -1,13 +1,4 @@
-<?php
- include 'validacionUsuario.php';
- $formulario_activado = false;
 
- if ( isset($_POST['usuario']) && isset($_POST['password']) ){
-    $usuario = $_POST['usuario'];
-    $password = $_POST['password'];
-    $formulario_activado = true;
-}
-?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -23,20 +14,16 @@
 
 <div class="padre">
     <div class="contenedorLogin">
-        <a class="volver" href="login.php"><img src="imagenes/flecha.svg" width="20" height="20"><p class="mover"> Volver al Login</p> </a>
+        <a class="volver" href="login.html"><img src="imagenes/flecha.svg" width="20" height="20"><p class="mover"> Volver al Login</p> </a>
         <img class="logo" src="imagenes/register.png" width="100" height="100">
         <h1>Registrate</h1>
-        <form action="registro.php" method="POST">
+
             <label class="labelLogin" aria-placeholder="Introduce tu nombre de usuario.." for="usuario">Nombre de usuario</label>
             <input class="inputsEntrada" type="text" name="usuario">
             <label class="labelLogin" for="password">Tu nueva contraseña</label>
             <input class="inputsEntrada" type="password" name="password">
-            <input class="login" type="submit" value="Registrate">
-            <?php if ( $formulario_activado ):  ?>
-                <?php registro($usuario, $password) ?>
-                <?php endif; ?>
-
-        </form>
+            <a href="inicio.html"><button class="login">Registrarse</button></a>
+  
         </div>
     </div>
     
