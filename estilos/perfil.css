@@ -363,6 +363,11 @@ html,body {
   width: 100%;
 }
 
+
+.activity {
+  font-size: 24px;
+}
+
 .textoVentaja {
   position: absolute;
   display: block;
