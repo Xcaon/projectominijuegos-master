@@ -147,7 +147,8 @@ html,body {
     background-color: #222831;
     border-radius: 10px;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    width: 80%;
   }
   
   .right-column .card-ofline {
@@ -156,7 +157,14 @@ html,body {
     background-color: #222831;
     border-radius: 10px;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    width: 80%;
+  }
+
+  .parametros {
+    background-color: white;
+    width: 400px;
+    height: 50px;
   }
   
   .right-column .card-online:hover{
@@ -306,7 +314,8 @@ html,body {
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
-    
+    background-color: #222831;
+    color: white;
   }
 
   .modal {
@@ -360,7 +369,7 @@ html,body {
   top: 50%;
   color: white;
   text-align: center;
-  background-color: #cccccca1;
+  background-color: #7e7e7ed2;
   width: 100%;
 }
 
@@ -370,9 +379,12 @@ html,body {
   float: right;
   margin-top: 20px;
   margin-right: 200px;
-  width: 300px;
+  width: 500px;
+  font-size: 32px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
+  background-color: #222831;
+  color: white;
 }
 
 .cuadrado {
@@ -389,6 +401,7 @@ html,body {
   margin-left: 10%;
   display: flex;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .encabezado {
@@ -452,3 +465,26 @@ html,body {
 h2 {
   font-size: 32px;
 }
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #222831;
+    color: white;
+    min-width: 30px;
+  }
+
