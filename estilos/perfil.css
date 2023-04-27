@@ -25,7 +25,7 @@ html,body {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    position: absolute;
+    position: relative;
     top: 40px;
     right: 145px;
     overflow: hidden;
@@ -90,8 +90,11 @@ html,body {
   }
   
   .profile-name {
+    display: flex;
+    align-items: center;
     text-align: center;
     margin-bottom: 10px;
+    width: 100%;
   }
   
   .friends {
@@ -236,6 +239,8 @@ html,body {
   .card-title {
     margin-top: 0;
     text-align: center;
+    font-size: 72px;
+    margin-bottom: 12px;
   }
   
   .card-trophy {
@@ -256,8 +261,8 @@ html,body {
   }
   
   .card-hours-played {
-    font-size: 14px;
-    color: #666;
+    color: white;
+    font-size: 24px;
   }
 
   .profile-pic-image {
@@ -426,3 +431,24 @@ html,body {
   float: right;
 }
 
+.hello {
+  width: 100px;
+  height: 100px;
+  display: inline;
+  border-radius: 12px;
+  margin-right: 10px;
+  min-width: 50%;
+}
+
+.hello1 {
+  width: 200px;
+  height: 200px;
+  display: inline;
+  border-radius: 12px;
+  margin-right: 10px;
+  min-width: 30%;
+}
+
+h2 {
+  font-size: 32px;
+}
