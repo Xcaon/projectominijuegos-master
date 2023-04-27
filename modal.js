@@ -30,3 +30,10 @@ window.addEventListener('click', function(event) {
 // Ajustar tamaño del contenido
 contenidoModal.style.width = '60%';
 contenidoModal.style.height = '60%';
+
+const moreOptionsBtn = document.querySelector('.more-options-btn');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+
+moreOptionsBtn.addEventListener('click', () => {
+    dropdownMenu.style.display = (dropdownMenu.style.display === 'none') ? 'block' : 'none';
+});
