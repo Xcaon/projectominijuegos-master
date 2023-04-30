@@ -6,7 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="estilos/estilos.css" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Estilos generales */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+        }
+
+        section {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+        color: #ddd;
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 20px;
+        }
+
+        ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        }
+
+        li {
+        border-bottom: 1px solid #ddd;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+
+        h3 {
+        font-size: 24px;
+        margin: 0;
+        }
+
+        p {
+        margin: 10px 0;
+        color: #ccc;
+        }
+
+        .btcomprar {
+        background-color: #c0c0c0;
+        color: rgb(0, 0, 0);
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        }
+
+        .btcomprar:hover {
+        background-color: #a4a7aa;
+        }
+
+        /* Estilos específicos para el estado de botón "disabled" */
+        .btcomprar:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+        }
+
+        .btcomprar:disabled:hover {
+        background-color: #ccc;
+        }
+        .contenedor-imagen {
+            display: flex;
+            align-items: center;
+        }
+
+        .texto-al-lado {
+            color: #ddd;
+            margin-left: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .saldo {
+            float: right;
+            margin-right: 200px;
+            display: flex;
+            align-items: center;
+        }
+        .llamadaAccion{
+            padding: 20px;
+            border-radius: 8px;
+            float: right;
+            margin-top: 20px;
+            margin-right: 200px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            background-color: #222831;
+            color: white;
+        }
+    </style>
     
 </head>
 <body >
@@ -32,38 +132,201 @@
             </div>
 
         </div>
-    
-    
-        <div class="cuerpo" >
-
-            
-
-            <section>
-                <h3>Juegos individuales</h3>
-                <div id="lista-individuales" class="tablaJuegos">
-                </div >
-            </section>
-          
-            <section>
-                <h3>Juegos multijugador</h3>
-                <div id="lista-multijugador" class="tablaJuegos">
-                </div>
-            </section>
-            
-            
-            <section >
-                <h3>Juegos arcade</h3>
-                <div id="lista-arcade" class="tablaJuegos">
-                </div>
-            </section>
-                  
-            
-            
-            
-    
+        <br><br>
+        <h2>Tienda de juegos</h2><br>
+        <div class="saldo">
+            <div class="texto-al-lado">Monedas disponibles: 320</div>
+            <img width="30" height="30"  src="images_tienda/coin.png">
         </div>
-        <script src="javascript/script.js "></script>
+        <div class="filtro-juegos">
+            <button id="boton-todos" class="btjuegos" onclick="filtrarJuegos('todos')">Todos</button>
+            <button id="boton-doble-xp" class="btjuegos" onclick="filtrarJuegos('doble-xp')">Doble XP</button>
+            <button id="boton-apariencias" class="btjuegos" onclick="filtrarJuegos('apariencias')">Apariencias</button>
+            <button id="boton-ropa" class="btjuegos" onclick="filtrarJuegos('ropa')">Ropa</button>
+            <button id="boton-funco-pop" class="btjuegos" onclick="filtrarJuegos('funco-pop')">Funko Pop</button>
+          </div>
+        </div><br><br>
+        <div class="cuerpotienda" >
+            <div>
+                <ul>
+                  <li class="apariencia">
+                    <img class="imagentienda" width="100" height="100"  src="images_tienda/apariencia3raya.PNG">
+                    <h3>Nueva apariencia 3 en raya</h3>
+                    <p>Personaliza el tablero de Tres en raya con una nueva apariencia.</p>
+                    <div class="contenedor-imagen">
+                        <div class="texto-al-lado">100</div><br><br><br>
+                        <img width="30" height="30"  src="images_tienda/coin.png">
+                    </div>
+                    <button class="btcomprar" onclick="comprar(100)">Comprar</button>
+                  </li>
+                  <li class="doble-xp">
+                    <img class="imagentienda" width="100" height="100"  src="images_tienda/x2.PNG">
+                    <h3>Doble puntuación tetris</h3>
+                    <p>Aumenta tu puntuación en Tetris con un bonus de doble puntuación por 1 hora.</p>
+                    <div class="contenedor-imagen">
+                        <div class="texto-al-lado">150</div><br><br><br>
+                        <img width="30" height="30"  src="images_tienda/coin.png">
+                    </div>
+                    <button class="btcomprar" onclick="comprar(150)">Comprar</button>
+                  </li>
+                  <li class="ropa">
+                    <img class="imagentienda" width="100" height="100"  src="images_tienda/camimario.PNG">
+                    <h3>Camiseta Super Mario</h3>
+                    <p>Una camiseta de Mario Bros con un diseño clásico y colorido, perfecta para los fanáticos del icónico personaje de Nintendo.</p>
+                    <div class="contenedor-imagen">
+                        <div class="texto-al-lado">700</div><br><br><br>
+                        <img width="30" height="30"  src="images_tienda/coin.png">
+                    </div>
+                    <button class="btcomprar" onclick="comprar(700)">Comprar</button>
+                  </li>
+                  <li class="funco-pop">
+                    <img class="imagentienda" width="100" height="100"  src="images_tienda/funcogoku.PNG">
+                    <h3>Funko de Goku</h3>
+                    <p>El juguete de acción perfecto para los fanáticos de Dragon Ball, con la figura de Goku lista para la batalla.</p>
+                    <div class="contenedor-imagen">
+                        <div class="texto-al-lado">900</div><br><br><br>
+                        <img width="30" height="30"  src="images_tienda/coin.png">
+                    </div>
+                    <button class="btcomprar" onclick="comprar(900)">Comprar</button>
+                  </li>
+                  <li class="ropa">
+                    <img class="imagentienda" width="100" height="100"  src="images_tienda/camisnake.PNG">
+                    <h3>Camiseta Snake</h3>
+                    <p>Camiseta de Snake, el icónico juego de serpientes, con diseño pixelado y colores vibrantes. Perfecta para los amantes de los videojuegos retro.</p>
+                    <div class="contenedor-imagen">
+                        <div class="texto-al-lado">700</div><br><br><br>
+                        <img width="30" height="30"  src="images_tienda/coin.png">
+                    </div>
+                    <button class="btcomprar" onclick="comprar(700)">Comprar</button>
+                  </li>
+                  <li class="ropa">
+                    <img class="imagentienda" width="100" height="100"  src="images_tienda/camisonic.PNG">
+                    <h3>Camiseta de sonic</h3>
+                    <p>Camiseta de Sonic con diseño retro y vibrante que presenta al icónico personaje en acción. Ideal para fanáticos de los videojuegos.</p>
+                    <div class="contenedor-imagen">
+                        <div class="texto-al-lado">700</div><br><br><br>
+                        <img width="30" height="30"  src="images_tienda/coin.png">
+                    </div>
+                    <button class="btcomprar" onclick="comprar(700)">Comprar</button>
+                  </li>
+                  <li class="doble-xp">
+                    <img class="imagentienda" width="100" height="100"  src="images_tienda/x2.PNG">
+                    <h3>Doble puntuación tres en raya</h3>
+                    <p>Aumenta tu puntuación en el Tres en raya con un bonus de doble puntuación por 1 hora.</p>
+                    <div class="contenedor-imagen">
+                        <div class="texto-al-lado">150</div><br><br><br>
+                        <img width="30" height="30"  src="images_tienda/coin.png">
+                    </div>
+                    <button class="btcomprar" onclick="comprar(100)">Comprar</button>
+                  </li>
+                  <li class="funco-pop">
+                    <img class="imagentienda" width="100" height="100"  src="images_tienda/funcoking.PNG">
+                    <h3>Funko de King Kong</h3>
+                    <p>Juguete de acción inspirado en King Kong con diseño realista y detalles impresionantes para coleccionar o jugar.</p>
+                    <div class="contenedor-imagen">
+                        <div class="texto-al-lado">900</div><br><br><br>
+                        <img width="30" height="30"  src="images_tienda/coin.png">
+                    </div>
+                    <button class="btcomprar" onclick="comprar(900)">Comprar</button>
+                  </li>
+                  <li class="funco-pop">
+                    <img class="imagentienda" width="100" height="100"  src="images_tienda/funcosonic.PNG">
+                    <h3>Funko de Sonic</h3>
+                    <p>Figura coleccionable de Sonic en su clásica pose de carrera. Detallada, pintada a mano y de alta calidad. ¡Imprescindible para los fans de Sonic!</p>
+                    <div class="contenedor-imagen">
+                        <div class="texto-al-lado">900</div><br><br><br>
+                        <img width="30" height="30"  src="images_tienda/coin.png">
+                    </div>
+                    <button class="btcomprar" onclick="comprar(900)">Comprar</button>
+                  </li>
+                </ul> 
+            </div>
+        </div>
     </div>
+    <script>
+        /*FILTRO TIENDA*/
+        // seleccionar los botones de filtro
+        const botonTodos = document.querySelector("#boton-todos");
+        const botonDobleXP = document.querySelector("#boton-doble-xp");
+        const botonApariencias = document.querySelector("#boton-apariencias");
+        const botonRopa = document.querySelector("#boton-ropa");
+        const botonFuncoPop = document.querySelector("#boton-funco-pop");
+
+        // seleccionar la lista <ul> y todos los elementos de la lista
+        const lista = document.querySelector("ul");
+        const elementos = lista.querySelectorAll("li");
+
+        // agregar un controlador de eventos a cada botón de filtro
+        botonTodos.addEventListener("click", () => {
+        // mostrar todos los elementos de la lista
+        elementos.forEach((elemento) => {
+            elemento.style.display = "block";
+        });
+        });
+
+        botonDobleXP.addEventListener("click", () => {
+        // mostrar solo elementos con la clase "doble-xp"
+        elementos.forEach((elemento) => {
+            if (elemento.classList.contains("doble-xp")) {
+            elemento.style.display = "block";
+            } else {
+            elemento.style.display = "none";
+            }
+        });
+        });
+
+        botonApariencias.addEventListener("click", () => {
+        // mostrar solo elementos con la clase "apariencia"
+        elementos.forEach((elemento) => {
+            if (elemento.classList.contains("apariencia")) {
+            elemento.style.display = "block";
+            } else {
+            elemento.style.display = "none";
+            }
+        });
+        });
+
+        botonRopa.addEventListener("click", () => {
+        // mostrar solo elementos con la clase "ropa"
+        elementos.forEach((elemento) => {
+            if (elemento.classList.contains("ropa")) {
+            elemento.style.display = "block";
+            } else {
+            elemento.style.display = "none";
+            }
+        });
+        });
+
+        botonFuncoPop.addEventListener("click", () => {
+        // mostrar solo elementos con la clase "funco-pop"
+        elementos.forEach((elemento) => {
+            if (elemento.classList.contains("funco-pop")) {
+            elemento.style.display = "block";
+            } else {
+            elemento.style.display = "none";
+            }
+        });
+        });
+
+        
+function comprar(precio) {
+    // Obtener las monedas del usuario desde algún lugar
+    var monedas = 320;
+
+    // Verificar si el usuario tiene suficientes monedas
+    if (monedas >= precio) {
+        // Permitir la compra
+        // ...
+    } else {
+        // Mostrar una advertencia
+        alert("No tienes monedas suficientes para comprar este artículo");
+    }
+}
+document.head.appendChild(style);
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="javascript/script.js "></script>
     
 </body>
 </html>
