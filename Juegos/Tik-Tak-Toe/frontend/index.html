@@ -10,11 +10,40 @@
 </head>
 
 <body>
+    <header>
+     
+    </header>
 
     <div class="text-container">
         <p id="current-turn" class="hide">It's <b><span id="clientId"></span></b> turn!</p>
     </div>
+
+    <h1>Tres en raya</h1>
+      <p>El Tic Tac Toe, también conocido como Tres en Raya o juego del gato, es un juego de mesa para dos
+        jugadores que se juega en una cuadrícula de 3x3 casillas. Los jugadores alternan turnos colocando
+        sus fichas (una 'X' para el primer jugador y una 'O' para el segundo) en una casilla vacía. El objetivo
+        es conseguir que tres fichas del mismo tipo estén en línea horizontal, vertical o diagonalmente antes
+        que el otro jugador. Si se llenan todas las casillas y nadie ha logrado una línea, el juego termina en
+        empate. Es un juego simple y popular que se puede jugar en cualquier lugar con lápiz y papel o
+        utilizando una aplicación en el teléfono móvil o computadora.</p>
+        <br>
+        <br>
     <div class="center-container">
+
+        <div class="reglas">
+            <h2 class="h2juegos">Reglas</h2><br>
+            <label><kbd></kbd>El juego se juega en una cuadrícula de 3x3 casillas.
+                Hay dos jugadores, uno que juega con "X" y otro que juega con "O".
+               </label>
+            <br><br>
+            <label> Los jugadores se turnan para colocar sus fichas en una casilla vacía de la cuadrícula.
+                El objetivo es conseguir que tres fichas del mismo tipo estén en línea, ya sea horizontal, vertical o diagonalmente.
+            </label>
+            <br><br>
+            <label></i> Si un jugador logra hacer una línea de tres, gana el juego y termina la partida.</label>
+            <br><br>
+            <!-- contenido de las reglas -->
+        </div>
         <div id="tic-tac-toe-grid">
             <button id="x0y0" onclick="turn(0,0)"></button>
             <button id="x1y0" onclick="turn(1,0)"></button>
@@ -25,9 +54,17 @@
             <button id="x0y2" onclick="turn(0,2)"></button>
             <button id="x1y2" onclick="turn(1,2)"></button>
             <button id="x2y2" onclick="turn(2,2)"></button>
+            <!-- contenido del tablero del juego -->
         </div>
-        <div class="weight-container"></div>
+        <div class="puntuacion">
+            <h2 class="h2juegos">Puntuación: 7-4</h2><br>
+           
+            <!-- contenido de la puntuación -->
+        </div>
+        <!--<div class="weight-container"></div>-->
     </div>
+
+    
     <div id="popup" class="hide">
         <div class="winner-container">
             <span>You <b><span id="winnerId"></span></b>!</span>
