@@ -202,7 +202,8 @@ a {
 .juego {
     border: 3px solid #ffffff;
     font-family: arial;
-    height: 100px;
+    padding: 0;
+    height: 160px;
     width: 60%;
     text-align: center;
     background: white;
