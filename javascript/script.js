@@ -26,7 +26,7 @@ const datos = [
   { nombre: "Snake", direccion: "Juegos/Snake/gamePage.html", imagen: "Juegos/Snake/images/snake.jpg", tipo: "tradicionales" },
   { nombre: "Tetris", direccion: "Juegos/Tetris/Source/tetris.html", imagen: "Juegos/Tetris/Source/images/bannertetris.PNG", tipo: "puzles" },
   { nombre: "Tres en raya", direccion: "Juegos/Tik-Tak-Toe/frontend/index.html", imagen: "Juegos/Tik-Tak-Toe/images/portada.png", tipo: "online" },
-  { nombre: "Catan", direccion:"Juegos/Catan/Catan.html", imagen: "imagenes/Catan_Portada.png", tipo: "online" },
+  { nombre: "Catan", direccion:"Juegos/Catan/CatanTorneo.html", imagen: "imagenes/Catan_Portada.png", tipo: "online" },
   { nombre: "Flappy Birds", direccion:"", imagen: "", tipo: "tradicionales" },
   { nombre: "Football Heads", direccion:"", imagen: "", tipo: "online" }
 ];
