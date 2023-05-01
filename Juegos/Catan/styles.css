@@ -156,7 +156,6 @@ p {
   margin-left: 0px;
   height: 80%;
   width: 90%;
-  background-image: url("images/imagenTienda.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -233,4 +232,10 @@ p {
 }
 .texto input{
   width: 80%;
+}
+.movimiento img{
+  width: 70px;
+  padding-left: 10px;
+  border-radius: 50%;
+  
 }
