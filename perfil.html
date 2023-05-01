@@ -109,11 +109,54 @@
             <div class="profile-name">
               <h2 class="hello" >Al-berto</h2>
               <img class="hello1" src="imagenes/plata.png">
-              <a href="#" onclick="window.open('infoRanked.html', 'ventana', 'width=1300,height=630,top='+((screen.height/2)-(630/2))+',left='+((screen.width/2)-(1300/2))); return false;"><img class="hello2" src="imagenes/imagenInfoRankeds.png"></a>
-            </div>
-            <div>
-              <button class="premiumAccion">HAZTE PREMIUM</button>
+             <!-- <a href="#" onclick="window.open('infoRanked.html', 'ventana', 'width=1300,height=630,top='+((screen.height/2)-(630/2))+',left='+((screen.width/2)-(1300/2))); return false;"><img class="hello2" src="imagenes/imagenInfoRankeds.png"></a> --> 
+             
+              <button id="miPopup" onclick="togglePopup()" style="background-color: #30475E; border: none; border-color:#30475E">
+                <img class="hello2" src="imagenes/imagenInfoRankeds.png" alt="Imagen">
+              </button>
               
+              <div class="popup" id="myPopup">
+                
+                <div class="columnas">
+                  <div class="item">
+                    <img src="imagenes/bronce.png" alt="Descripción de imagen 1">
+                    <h2>Bronce</h2>
+                    <p>0-100 <br><br> Coste: 0 puntos <br><br> 10 puntos al ganar</p>
+                  </div>
+                  <div class="item">
+                     <img src="imagenes/plata.png" alt="Descripción de imagen 2">
+                    <h2>Plata</h2>
+                    <p>100-200 <br><br> Coste: 10 puntos <br><br> Recibes la suma total de la apuesta <br><br> Monedas: +1</p>
+
+                  </div>
+                  <div class="item">
+                    <img src="imagenes/oro.png" alt="Descripción de imagen 3">
+                    <h2>Oro</h2>
+                    <p>200-300 <br><br> Coste: 20 puntos <br><br> Recibes la suma total de la apuesta <br><br> Monedas: +2</p>
+                  </div>
+                  <div class="item">
+                    <img src="imagenes/platino.png" alt="Descripción de imagen 4">
+                    <h2>Platino</h2>
+                    <p>300-400 <br><br> Coste: 30 puntos <br><br> Recibes la suma total de la apuesta <br><br> Monedas: +3</p>
+                  </div>
+                  <div class="item">
+                    <img src="imagenes/diamante.png" alt="Descripción de imagen 5">
+                    <h2>Diamante</h2>
+                    <p>400-500 <br><br> Coste: 40 puntos <br><br> Recibes la suma total de la apuesta <br><br> Monedas: +4</p>
+                  </div>
+                  <div class="item">
+                    <img src="imagenes/maestro.png" alt="Descripción de imagen 6">
+                    <h2>Maestro</h2>
+                    <p> +500 <br><br> Coste: 50 puntos <br><br> Recibes la suma total de la apuesta <br><br> Monedas: +5</p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div>
+              <button class="premiumAccion">HAZTE PREMIUM</button>              
                   <div class="modal">
                     <div class="modal-contenido">
                       <span class="cerrar">&times;</span>
@@ -121,7 +164,7 @@
                         <div class="encabezado">
                           <div class="seccion1">
                               <a href="inicio.html"><img class="imagenLogo" width="150" height="150"  src="imagenes/radicalLogo.jpg"></a> 
-                          </div>             
+                          </div>
                   
                                <div style="background-color: transparent;" class="seccion2">
                           
@@ -184,6 +227,8 @@
                       </div>
                     </div>
                   </div>  
+
+
             </div>
             <div class="friends">
               <h3>Amigos</h3>
@@ -321,6 +366,16 @@
         </div>
     </main>
 
+    <script>
+      function togglePopup() {
+			var popup = document.getElementById("myPopup");
+			if (popup.style.display === "none") {
+				popup.style.display = "block";
+			} else {
+				popup.style.display = "none";
+			}
+		}
+    </script>
     <script src="modal.js"></script>
   </body>
   
