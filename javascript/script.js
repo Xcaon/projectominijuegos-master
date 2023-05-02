@@ -1,18 +1,11 @@
 
-/*const datos = [
-  { nombre: "Elemento 1", categoria: "Categoria 1" },
-  { nombre: "Elemento 2", categoria: "Categoria 2" },
-  { nombre: "Elemento 3", categoria: "Categoria 1" },
-  { nombre: "Elemento 4", categoria: "Categoria 3" },
-  { nombre: "Elemento 5", categoria: "Categoria 2" }
-];*/
 
 /*const datos = [
   { nombre: "Snake", direccion: "Juegos/Snake/gamePage.html", imagen: "Juegos/Snake/images/snake.jpg" },
   { nombre: "Tetris", direccion: "Juegos/Tetris/Source/tetris.html", imagen: "Juegos/Tetris/Source/images/bannertetris.PNG" },
-  {nombre: "Tres en raya", direccion: "Juegos/Tik-Tak-Toe/frontend/index.html", imagen: "Juegos/Tik-Tak-Toe/images/portada.png"},
-  { nombre: "Sonic", direccion:"", imagen: ""},
-  { nombre: "Flappy Birds", direccion:"", imagen: ""},
+  {nombre: "Tres en raya", direccion: "Juegos/Tik-Tak-Toe/frontend/index.html", imagen: "Juegos/Tik-Tak-Toe/portada.PNG"},
+  { nombre: "Sonic", direccion:"", imagen: "Juegos/images_juegos/captura.PNG"},
+  { nombre: "Flappy Birds", direccion:"", imagen: "Juegos/images_juegos/flapy.PNG"},
   { nombre: "Football Heads", direccion:"", imagen: ""}
 ];*/
 
@@ -25,17 +18,39 @@
 const datos = [
   { nombre: "Snake", direccion: "Juegos/Snake/gamePage.html", imagen: "Juegos/Snake/images/snake.jpg", tipo: "tradicionales" },
   { nombre: "Tetris", direccion: "Juegos/Tetris/Source/tetris.html", imagen: "Juegos/Tetris/Source/images/bannertetris.PNG", tipo: "puzles" },
-  { nombre: "Tres en raya", direccion: "Juegos/Tik-Tak-Toe/frontend/index.html", imagen: "Juegos/Tik-Tak-Toe/images/portada.png", tipo: "online" },
+  { nombre: "Tres en raya", direccion: "Juegos/Tik-Tak-Toe/frontend/index.html", imagen: "Juegos/Tik-Tak-Toe/frontend/images/portada.png", tipo: "online" },
   { nombre: "Catan", direccion:"Juegos/Catan/CatanTorneo.html", imagen: "imagenes/Catan_Portada.png", tipo: "online" },
-  { nombre: "Flappy Birds", direccion:"", imagen: "", tipo: "tradicionales" },
-  { nombre: "Football Heads", direccion:"", imagen: "", tipo: "online" }
+  { nombre: "Flappy Birds", direccion:"", imagen: "Juegos/images_juegos/flapy.PNG", tipo: "tradicionales" },
+  { nombre: "Sonic", direccion:"", imagen: "Juegos/images_juegos/captura.PNG", tipo: "carreras" },
+  { nombre: "Football Heads", direccion:"", imagen: "Juegos/images_juegos/heads.PNG", tipo: "online" },
+  { nombre: "Ajedrez", direccion:"", imagen: "Juegos/images_juegos/ajedrez.PNG", tipo: "online" },
+  { nombre: "Air Fighter", direccion:"", imagen: "Juegos/images_juegos/air.PNG", tipo: "combate" },
+  { nombre: "Street Fighter", direccion:"", imagen: "Juegos/images_juegos/street.PNG", tipo: "combate" },
+  { nombre: "Dragon Ball Z 3", direccion:"", imagen: "Juegos/images_juegos/dragon.PNG", tipo: "combate" },
+  { nombre: "Puzzle de madera", direccion:"", imagen: "Juegos/images_juegos/madera.PNG", tipo: "puzles" },
+  { nombre: "Moto XM3 Race", direccion:"", imagen: "Juegos/images_juegos/moto.PNG", tipo: "carreras" },
+  { nombre: "Formula 1 Racing", direccion:"", imagen: "Juegos/images_juegos/f1.PNG", tipo: "carreras" },
+  { nombre: "Bubble Shooter", direccion:"", imagen: "Juegos/images_juegos/bubble.PNG", tipo: "puzles" },
+  { nombre: "Sopas de letras", direccion:"", imagen: "Juegos/images_juegos/letras.PNG", tipo: "educativos" }
 ];
 const listaElementos = datos.map((dato) => {
   return `<div style="background-image: url(${dato.imagen} ); background-size: cover;" class="juego"> <a href="${dato.direccion}">
   
   <button class="nombre">${dato.nombre}</button></a> </div>`;
 });
+const listaMultijugador = document.getElementById("lista-multijugador");
 
+    datos.forEach((dato) => {
+    const juego = document.createElement("div");
+    juego.setAttribute("style", `background-image: url(${dato.imagen}); background-size: cover;`);
+    juego.setAttribute("class", "juego");
+    juego.innerHTML = `
+        <a href="${dato.direccion}">
+        <button class="nombre">${dato.nombre}</button>
+        </a>
+    `;
+    listaMultijugador.appendChild(juego);
+    });
 // Agrega los elementos al contenedor del carousel
 $('#carousel').append(listaElementos.join(""));
 
@@ -102,4 +117,3 @@ function redirigir() {
   window.location.href = 'login.php';
 }
 
-/*FILTRO JUEGOS*/
