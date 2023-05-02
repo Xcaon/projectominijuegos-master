@@ -30,7 +30,6 @@ a {
 
 .menu {
     display: inline;
-    background-color: white;
     padding: 10px;
     text-decoration: none;
    padding-left: 20px;
@@ -39,15 +38,46 @@ a {
    text-transform: uppercase;
    font-family: Arial;
    font-weight: 700;
-   color: black;
+   color: white !important;
+   text-decoration: none;
+   list-style-type: none;
+}
+
+.menu1 {
+    display: inline;
+      padding-right: 20px;
+    text-decoration: none;
+   border-radius: 15px;
+   text-transform: uppercase;
+   font-family: Arial;
+   font-weight: 700;
+   color: white !important;
+   text-decoration: none;
+   list-style-type: none;
+   border: 0;
+}
+
+.elementoInput1 {
+    border: 0px;
+}
+
+a {
+    color: white;
+    cursor: pointer;
 }
 
 a:visited {
-    color: black;
+    color: white;
+}
+
+
+.elementoInput {
+    display: inline;
 }
 
 a:active {
-    color: blue;
+    color: #30475E;
+    text-decoration: underline;
 }
 
 .elementoInput {
@@ -86,12 +116,9 @@ a:active {
 }
 
 .buscar input{
-    
     margin-left: 1100px;
     background-color: #d0d3d7;
     width: 300px;
-    
-
 }
 
 
@@ -124,12 +151,11 @@ a:active {
 
 .seccion2 {
     width: 50%;
-    background-color: white;
     border-radius: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .seccion3 {
@@ -137,14 +163,33 @@ a:active {
     padding-right: 10px;
 }
 
+.seccion11 {
+  width: 25%;
+  padding-left: 10px;
+}
+
+
+.seccion22 {
+  width: 50%;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: transparent;
+}
+.seccion33 {
+  width: 25%;
+  padding-right: 10px;
+}
+
 .texto {
     font-size: 32px;
     font-family: 'Roboto', sans-serif;
     font-weight: 800;
 }
-a {
-    cursor: pointer;
-}
+
+
 
 
 .iconoLogin {

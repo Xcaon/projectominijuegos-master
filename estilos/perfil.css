@@ -336,7 +336,7 @@ html,body {
   padding: 20px;
   border: 1px solid #888;
   min-width: 80%;
-  min-height: 80%;
+  min-height: 100vh !important;
 }
 
 .cerrar {
@@ -423,10 +423,15 @@ html,body {
 
 }
 
+
+
 .seccion1 {
   width: 25%;
   padding-left: 10px;
 }
+
+
+
 
 .seccion2 {
   width: 50%;
@@ -438,10 +443,13 @@ html,body {
   flex-wrap: wrap;
 }
 
+
+
 .seccion3 {
   width: 25%;
   padding-right: 10px;
 }
+
 
 .imagenPerfil{
   margin-left: 700px;
