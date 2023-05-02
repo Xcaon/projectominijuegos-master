@@ -239,3 +239,6 @@ p {
   border-radius: 50%;
   
 }
+.contenido h2{
+  transform: translate(100px, -50px);
+}

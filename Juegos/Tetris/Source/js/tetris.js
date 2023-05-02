@@ -85,6 +85,7 @@ class Game {
 
     resetGame() {
         this.scorep = 0;
+        this.maxScore = 0;
         this.sounds.success.currentTime = 0;
         this.sounds.success.pause();
         this.sounds.background.currentTime = 0;
@@ -413,9 +414,25 @@ y a <a href="https://freesound.org/people/grunz/sounds/109662/">Freesound.org</a
     }
 
     refreshScore() {
-        this.$scorep.textContent = `${this.scorep}`;
+        /*this.$scorep.textContent = `${this.scorep}`;
         if(`${this.maxScore}`)
-        this.$maxScore.textContent = `${this.maxScore}`;
+        this.$maxScore.textContent = `${this.maxScore}`;*/
+
+        this.$scorep.textContent = `${this.scorep}`;
+
+        if (this.scorep > this.maxScore) {
+            this.maxScore = this.scorep;
+            this.$maxScore.textContent = `${this.maxScore}`;
+            localStorage.setItem('maxScore', this.maxScore);
+          }
+          else {
+            const savedMaxScore = localStorage.getItem('maxScore');
+            if (savedMaxScore !== null) {
+              this.maxScore = parseInt(savedMaxScore);
+              this.$maxScore.textContent = `${this.maxScore}`;
+            }
+          }
+
     }
 
     initSounds() {
